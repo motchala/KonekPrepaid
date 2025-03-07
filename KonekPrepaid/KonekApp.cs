@@ -1,5 +1,11 @@
 ﻿using System.Runtime.CompilerServices;
 
+// Frederick Rosales
+// BSIT 2-1
+
+// GlobeOne App and/or Smart App inspired.
+
+
 namespace KonekPrepaid
 {
     public class KonekApp
@@ -38,10 +44,10 @@ namespace KonekPrepaid
                         Console.Write("Enter Load Amount: ");
                         loadAmnt = Convert.ToInt32(Console.ReadLine());
 
-                        if (loadAmnt == back)
+                        if (loadAmnt == back) 
                         {
                             Console.WriteLine("\n\t! Returned you back to the Main Menu !");
-                            continue;
+                            continue;        // enter "-1" to return back to the main menu.
                         }
                         loadBalance += loadAmnt;
                         Console.WriteLine("\n\t[Load Balance = " + loadBalance + "]");
