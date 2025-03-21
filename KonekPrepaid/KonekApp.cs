@@ -11,9 +11,6 @@ namespace KonekPrepaid
             kon149 = 149,
             kon300 = 300,
             konChoice;
-
-
-
         KonekApp() // constructor that calls each method separately
         {
             mainMenu();
@@ -63,13 +60,34 @@ namespace KonekPrepaid
                     }
                     else if (choice1 == 2)
                     {
-                        Console.WriteLine("\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n");
+                    promoMenu(); // method calling
+                }
+                else if (choice1 == 3)
+                {
+                    Console.WriteLine("\n\t[Load Balance: " + loadBalance + "]");
+                    displayBorder();
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("\n! Invalid Choice !");
+                }
+            }
+        }
+
+
+
+
+
+        public void promoMenu()
+        {
+            displayBorder();
                         Console.WriteLine("\tPROMO:\n\n" +
-                            "\t1. Konek59\n" +
-                            "\t2. Konek99\n" +
-                            "\t3. Konek149\n" +
-                            "\t4. Konek300\n" +
-                            "\t0. Back\n");
+                "\t[1] Konek59\n" +
+                "\t[2] Konek99\n" +
+                "\t[3] Konek149\n" +
+                "\t[4] Konek300\n" +
+                "\t[0] Back\n");
                         Console.Write("\tChoose promo: ");
                         konChoice = Convert.ToInt32(Console.ReadLine());
 
