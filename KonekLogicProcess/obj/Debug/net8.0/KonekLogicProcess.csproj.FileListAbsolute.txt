@@ -1,0 +1,11 @@
+C:\Programming\C#\KonekLogicProcess\bin\Debug\net8.0\KonekLogicProcess.deps.json
+C:\Programming\C#\KonekLogicProcess\bin\Debug\net8.0\KonekLogicProcess.dll
+C:\Programming\C#\KonekLogicProcess\bin\Debug\net8.0\KonekLogicProcess.pdb
+C:\Programming\C#\KonekLogicProcess\obj\Debug\net8.0\KonekLogicProcess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming\C#\KonekLogicProcess\obj\Debug\net8.0\KonekLogicProcess.AssemblyInfoInputs.cache
+C:\Programming\C#\KonekLogicProcess\obj\Debug\net8.0\KonekLogicProcess.AssemblyInfo.cs
+C:\Programming\C#\KonekLogicProcess\obj\Debug\net8.0\KonekLogicProcess.csproj.CoreCompileInputs.cache
+C:\Programming\C#\KonekLogicProcess\obj\Debug\net8.0\KonekLogicProcess.dll
+C:\Programming\C#\KonekLogicProcess\obj\Debug\net8.0\refint\KonekLogicProcess.dll
+C:\Programming\C#\KonekLogicProcess\obj\Debug\net8.0\KonekLogicProcess.pdb
+C:\Programming\C#\KonekLogicProcess\obj\Debug\net8.0\ref\KonekLogicProcess.dll
