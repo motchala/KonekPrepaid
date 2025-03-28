@@ -11,7 +11,7 @@ namespace KonekApplication
 
 
 
-
+        
         public void mainMenu()
         {
             Console.WriteLine("\t\t\tWelcome to Konek App!");
@@ -22,7 +22,7 @@ namespace KonekApplication
                 Console.WriteLine("MAIN MENU:\n\n" +
                     "[1] Buy Load\n" +
                     "[2] Buy Promos\n" +
-                    "[3] Check Balance\n" +
+                    "[3] Check Account\n" +
                     "[0] Exit App\n");
                 Console.Write("Choose menu: ");
                 BusinessDataLogic.choiceMenu = Convert.ToInt32(Console.ReadLine());
@@ -42,11 +42,11 @@ namespace KonekApplication
                 }
                 else if (BusinessDataLogic.choiceMenu == 3)
                 {
-                    BalanceDisplay();
+                    AccountDisplay();
                 }
                 else
                 {
-                    ErrorDisplay();
+                    InvalidDisplay();
                 }
             }
         }
@@ -66,6 +66,10 @@ namespace KonekApplication
                 HalfBorderText();
                 Console.WriteLine("! Returning to main menu... !");
                 HalfBorderText(); Thread.Sleep(2200); // a visual delay
+            }
+            else if(BusinessDataLogic.loadAmount < 10)
+            {
+                Console.WriteLine(" ! You can only avail above 10 peso load amount ! ");
             }
             else
             {
@@ -97,7 +101,7 @@ namespace KonekApplication
             }
             else if (BusinessDataLogic.choicePromo < 1 || BusinessDataLogic.choicePromo > 4)
             {
-                ErrorDisplay();
+                InvalidDisplay();
                 return;
             }
 
@@ -116,6 +120,18 @@ namespace KonekApplication
         }
 
 
+        public void CheckActivePromo()
+        {
+            if (BusinessDataLogic.SubscriptionChecker != null)
+            {
+                Console.WriteLine("\tActive Promo: [ " + BusinessDataLogic.promoName + " ]");
+            }
+            else
+            {
+                Console.WriteLine("\t ! ERROR ! ");
+            }
+
+        }
         public void PromoNamer()
         {
             switch (BusinessDataLogic.choicePromo)
@@ -130,10 +146,11 @@ namespace KonekApplication
 
 
 
-        public void BalanceDisplay()
+        public void AccountDisplay()
         {
             BorderText();
             Console.WriteLine("\t[Current Load Balance = " + BusinessDataLogic.loadBalance + "]");
+            CheckActivePromo();
             BorderText();
         }
 
@@ -170,7 +187,7 @@ namespace KonekApplication
         {
             Console.WriteLine("\n\t\t[You're now subscribed to " + BusinessDataLogic.promoName + " promo]");
         }
-        public void ErrorDisplay()
+        public void InvalidDisplay()
         {
             HalfBorderText();
             Console.WriteLine(" ! Invalid Choice ! "); 

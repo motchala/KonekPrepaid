@@ -18,7 +18,7 @@ namespace KonekLogicProcess
                           kon99 = 99,
                           kon149 = 149,
                           kon300 = 300;
-        public static string promoName;
+        public static string promoName = "";
 
 
         // adds the purchased load to the load balance
@@ -35,8 +35,23 @@ namespace KonekLogicProcess
             {
                 return loadBalance >= promoPrices[choicePromo];
             }
-                return false;
+            return false;
         }
+
+
+        // chinecheck lang neto kung naka subscribe kana ba on any promo or what HAHAAHAHHAHA
+        public static bool SubscriptionChecker()
+        {
+            if (CanPurchasePromo())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         // updates the load balance after a promo purchase
         public static void LoadBalUpdate()
@@ -48,6 +63,8 @@ namespace KonekLogicProcess
                 loadBalance -= promoPrices[choicePromo];
             }
         }
+
+        
     }
 }
 
