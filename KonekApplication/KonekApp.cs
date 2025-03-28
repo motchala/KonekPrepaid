@@ -64,13 +64,13 @@ namespace KonekApplication
             if (BusinessDataLogic.loadAmount == BusinessDataLogic.secretBack)
             {
                 HalfBorderText();
-                Console.WriteLine("! Returning to main menu... !");
+                Console.WriteLine("    ! Returning to main menu... !");
                 HalfBorderText(); Thread.Sleep(2200); // a visual delay
             }
             else if(BusinessDataLogic.loadAmount < 10)
             {
                 HalfBorderText();
-                Console.WriteLine("! Minimum load is 10 pesos !");
+                Console.WriteLine("    ! Minimum load is 10 pesos !");
                 HalfBorderText();
             }
             else
@@ -151,7 +151,7 @@ namespace KonekApplication
         public void AccountDisplay()
         {
             BorderText();
-            Console.WriteLine("\tCurrent Load Balance = [" + BusinessDataLogic.loadBalance + "]");
+            Console.WriteLine("\tLoad Balance = [" + BusinessDataLogic.loadBalance + "]");
             CheckActivePromo();
             BorderText();
         }
