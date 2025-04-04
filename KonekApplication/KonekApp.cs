@@ -1,4 +1,5 @@
-﻿using KonekLogicProcess;
+﻿using System.Globalization;
+using KonekLogicProcess;
 namespace KonekApplication
 {
     public class KonekApp
@@ -6,15 +7,47 @@ namespace KonekApplication
         BusinessDataLogic BDL = new BusinessDataLogic();
         public KonekApp()
         {
-            mainMenu();
+            Login();
+        }
+
+
+        
+        // string accEmail = "iamfrederickr@gmail.com";          // still dunno how ill implement this but might add this later on
+        
+        public void Login()
+        {
+            Console.Write("Login\n");
+            Console.Write("\nAccount Number: ");
+            BusinessDataLogic.inputNumber = Console.ReadLine();
+            Console.Write("Enter Password: ");
+            BusinessDataLogic.inputPassword = Console.ReadLine();
+            Console.Clear();
+
+            while (true)
+            {
+                if (BusinessDataLogic.inputNumber == BusinessDataLogic.accNumber && 
+                    BusinessDataLogic.inputPassword == BusinessDataLogic.accPassword)
+                {
+                    Thread.Sleep(1500);
+                    Console.WriteLine("\n\tLogged In Succesfully!");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    mainMenu();
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.WriteLine("\n\t! Wrong Account Credentials!");
+                    return;
+                }
+            }
         }
 
 
 
-        
         public void mainMenu()
         {
-            Console.WriteLine("\t\t\tWelcome to Konek App!");
+            Console.WriteLine("\t\tWelcome to Konek App!");
             BorderText();
 
             while (true)
@@ -57,8 +90,8 @@ namespace KonekApplication
         public void LoadMenu()
         {
             BorderText();
-            Console.WriteLine("\tLOAD MENU:\n");
-            Console.Write("\tEnter Load Amount: ");
+            Console.WriteLine("LOAD MENU:\n");
+            Console.Write("Enter Load Amount: ");
             BusinessDataLogic.loadAmount = Convert.ToInt32(Console.ReadLine());
 
             if (BusinessDataLogic.loadAmount == BusinessDataLogic.secretBack)
@@ -67,33 +100,35 @@ namespace KonekApplication
                 Console.WriteLine("    ! Returning to main menu... !");
                 HalfBorderText(); Thread.Sleep(2200); // a visual delay
             }
-            else if(BusinessDataLogic.loadAmount < 10)
+            else if (BusinessDataLogic.loadAmount < 10)
             {
+                Thread.Sleep(420);
                 HalfBorderText();
                 Console.WriteLine("    ! Minimum load is 10 pesos !");
                 HalfBorderText();
+                Thread.Sleep(500);
             }
             else
             {
                 BusinessDataLogic.LoadProcess();
                 LoadSuccessDisplay();
-                Thread.Sleep(500);
+                Thread.Sleep(300);
                 BorderText();
+                Thread.Sleep(300);
             }
-            
         }
 
 
         public void PromoMenu()
         {
             BorderText();
-            Console.WriteLine("\tPROMO MENU:\n\n" +
-                "\t[1] Konek59\n" +
-                "\t[2] Konek99\n" +
-                "\t[3] Konek149\n" +
-                "\t[4] Konek300\n" +
-                "\t[0] Back\n");
-            Console.Write("\tChoose promo: ");
+            Console.WriteLine("PROMO MENU:\n\n" +
+                "[1] Konek59\n" +
+                "[2] Konek99\n" +
+                "[3] Konek149\n" +
+                "[4] Konek300\n" +
+                "[0] Back\n");
+            Console.Write("Choose promo: ");
             BusinessDataLogic.choicePromo = Convert.ToInt32(Console.ReadLine());
 
             if (BusinessDataLogic.choicePromo == 0) // returns you to main menu
@@ -103,13 +138,13 @@ namespace KonekApplication
             }
             else if (BusinessDataLogic.choicePromo < 1 || BusinessDataLogic.choicePromo > 4)
             {
-                InvalidDisplay();
+                InvalidDisplay(); // error promo choice
                 return;
             }
 
             if (BusinessDataLogic.CanPurchasePromo())
             {
-                BusinessDataLogic.LoadBalUpdate();
+                BusinessDataLogic.PromoLoadUpdate();
                 PromoNamer();
                 PromoSuccessDisplay();
                 BorderText();
@@ -122,6 +157,22 @@ namespace KonekApplication
         }
 
 
+
+
+
+        // CHECK ACCOUNT || Displays the balance and current active promo
+        public void AccountDisplay()
+        {
+            BorderText();
+            Console.WriteLine("\tLoad Balance: [" + BusinessDataLogic.loadBalance + "]");
+            CheckActivePromo();
+            BorderText();
+        }
+
+
+
+
+        // CHECK ACCOUNT || this check the active promo. then prints only the active promo specifically the active promo print
         public void CheckActivePromo()
         {
             if (BusinessDataLogic.SubscriptionChecker != null)
@@ -132,8 +183,11 @@ namespace KonekApplication
             {
                 Console.WriteLine("\t ! ERROR ! ");
             }
-
         }
+
+
+        // displays the name of the active promo. displays the specific promo chosen by the user.
+        // nilagyan lang ng katumbas na string
         public void PromoNamer()
         {
             switch (BusinessDataLogic.choicePromo)
@@ -148,22 +202,12 @@ namespace KonekApplication
 
 
 
-        public void AccountDisplay()
-        {
-            BorderText();
-            Console.WriteLine("\tLoad Balance = [" + BusinessDataLogic.loadBalance + "]");
-            CheckActivePromo();
-            BorderText();
-        }
 
 
-
-
-
-        // Designs lang palamuti
+        // INTERFACE! DESIGN!
         public void BorderText()
         {
-            Console.WriteLine("\n---------------------------------------------------------------------------\n");
+            Console.WriteLine("\n--------------------------------------------------------\n");
         }
         public void HalfBorderText()
         {
@@ -171,28 +215,31 @@ namespace KonekApplication
         }
         public void SoundEffects() // for when successful promo subscription
         {
+            Thread.Sleep(400);
             Console.Beep();
         }
-       
+
         public void LoadSuccessDisplay()
         {
             Thread.Sleep(1000);
-            Console.WriteLine("\n\t[Successful Load Transaction]");
+            Console.WriteLine("\n          [Successful Load Transaction]");
         }
         public void Insufficient()
         {
+            Thread.Sleep(700);
             HalfBorderText();
             Console.WriteLine("\t! Insufficient Load ! ");
             HalfBorderText();
         }
         public void PromoSuccessDisplay()
         {
-            Console.WriteLine("\n\t\t[You're now subscribed to " + BusinessDataLogic.promoName + " promo]");
+            Thread.Sleep(1000);
+            Console.WriteLine("\n\t[You're now subscribed to " + BusinessDataLogic.promoName + " promo]");
         }
         public void InvalidDisplay()
         {
             HalfBorderText();
-            Console.WriteLine("\t ! Invalid Choice ! "); 
+            Console.WriteLine("\t! Invalid Choice ! ");
             HalfBorderText();
         }
 

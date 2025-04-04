@@ -10,9 +10,15 @@ namespace KonekLogicProcess
 {
     public class BusinessDataLogic
     {
+        // Login variables
+        public static string accNumber = "09662668443";
+        public static string accPassword = "fred123";
+        public static string inputNumber, inputPassword;
+
+
         public static int choiceMenu;           // getting main menu input
         public static int loadAmount;           // getting load amount input
-        public static int secretBack = -1;      // secret number to return to main menu
+        public static int secretBack = 0;      // secret number to return to main menu
         public static int choicePromo;          // getting promo menu choice 0-4
         public static int loadBalance = 70;     // initial but dynamic load balance value
         public static int kon59 = 59,           // coresponding value of available promos
@@ -40,22 +46,17 @@ namespace KonekLogicProcess
         }
 
 
-        // chinecheck lang neto kung naka subscribe kana ba on any promo or what HAHAAHAHHAHA
+        // chinecheck lang neto kung naka subscribe kana ba on any promo or what 
         public static bool SubscriptionChecker()
         {
             if (CanPurchasePromo())
-            {
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
 
-
         // updates the load balance after a promo purchase
-        public static void LoadBalUpdate()
+        public static void PromoLoadUpdate()
         {
             int[] promoPrices = { 0, kon59, kon99, kon149, kon300 };
 
