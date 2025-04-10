@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekApplication", "KonekApplication.csproj", "{B26D8971-970B-40D2-B07C-C8B97FB2F484}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekApplication", "KonekAp
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekLogicProcess", "..\KonekLogicProcess\KonekLogicProcess.csproj", "{09C2F02E-2CD1-4B18-B260-D6087603F521}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekDataService", "..\KonekDataLogic\KonekDataService.csproj", "{4E691F3F-F403-473C-8E8E-29DE2D1C1483}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekCommon", "..\KonekCommon\KonekCommon.csproj", "{B1AFE7BD-9FDA-4883-8429-CF9782DAA2B0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +28,14 @@ Global
 		{09C2F02E-2CD1-4B18-B260-D6087603F521}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09C2F02E-2CD1-4B18-B260-D6087603F521}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09C2F02E-2CD1-4B18-B260-D6087603F521}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E691F3F-F403-473C-8E8E-29DE2D1C1483}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E691F3F-F403-473C-8E8E-29DE2D1C1483}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E691F3F-F403-473C-8E8E-29DE2D1C1483}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E691F3F-F403-473C-8E8E-29DE2D1C1483}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1AFE7BD-9FDA-4883-8429-CF9782DAA2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1AFE7BD-9FDA-4883-8429-CF9782DAA2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1AFE7BD-9FDA-4883-8429-CF9782DAA2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1AFE7BD-9FDA-4883-8429-CF9782DAA2B0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
