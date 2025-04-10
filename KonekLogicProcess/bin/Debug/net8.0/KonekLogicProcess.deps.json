@@ -7,14 +7,46 @@
   "targets": {
     ".NETCoreApp,Version=v8.0": {
       "KonekLogicProcess/1.0.0": {
+        "dependencies": {
+          "KonekDataService": "1.0.0"
+        },
         "runtime": {
           "KonekLogicProcess.dll": {}
+        }
+      },
+      "KonekCommon/1.0.0": {
+        "runtime": {
+          "KonekCommon.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "KonekDataService/1.0.0": {
+        "dependencies": {
+          "KonekCommon": "1.0.0"
+        },
+        "runtime": {
+          "KonekDataService.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "KonekLogicProcess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KonekCommon/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "KonekDataService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "KonekCommon/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/KonekCommon.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KonekCommon.dll": {}
+        }
+      },
+      "KonekDataService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "KonekCommon": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KonekDataService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KonekDataService.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "KonekCommon/1.0.0": {
+      "type": "project",
+      "path": "../KonekCommon/KonekCommon.csproj",
+      "msbuildProject": "../KonekCommon/KonekCommon.csproj"
+    },
+    "KonekDataService/1.0.0": {
+      "type": "project",
+      "path": "../KonekDataLogic/KonekDataService.csproj",
+      "msbuildProject": "../KonekDataLogic/KonekDataService.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "KonekDataService >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Frederick\\.nuget\\packages\\": {},
@@ -38,7 +75,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Frederick\\Source\\Repos\\KonekPrepaid\\KonekDataLogic\\KonekDataService.csproj": {
+              "projectPath": "C:\\Users\\Frederick\\Source\\Repos\\KonekPrepaid\\KonekDataLogic\\KonekDataService.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
