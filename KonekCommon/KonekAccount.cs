@@ -17,11 +17,9 @@
             }
         }
 
-
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
         public string AccountName { get; set; }
-
         public double LoadBalance { get; set; }
         
     }

@@ -36,8 +36,8 @@ namespace KonekDataService
             account3.AccountName = "Manang Iseng";
             account3.LoadBalance = 15;
             accountList.Add(account3);
-
         }
+
 
         public bool ValidateKonekAccount(string accountNumber, string pin)
         {
