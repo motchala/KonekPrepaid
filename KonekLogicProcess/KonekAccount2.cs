@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+// declares the properties which we will then use for our DummyAccounts in another project.
+//
 namespace KonekLogicProcess
 {
     public class KonekAccount2

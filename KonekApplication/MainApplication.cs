@@ -1,6 +1,7 @@
-﻿using System.Globalization;
-using KonekLogicProcess;
+﻿using KonekLogicProcess;
 namespace KonekApplication
+// runs the whole application, takes care of the UI and UI its processes
+
 {
     internal class MainApplication
     {
@@ -17,32 +18,32 @@ namespace KonekApplication
         public void Login()
         {
             string userPin = string.Empty;
-            Console.Write("Login\n");
+                Console.Write("Konek LOGIN\n\n");
 
             do
             {
-
-
-                Console.Write("\nAccount Number: ");
+                Console.Write("\nEnter Number: ");
                 inputNumber = Console.ReadLine();
 
                 Console.Write("Enter Password: ");
                 userPin = Console.ReadLine();
-                Console.Clear();
 
                 if (!konekService.ValidateAccount(inputNumber, userPin))
                 {
-                    Console.WriteLine("FAILED: Incorrect PIN. Please try again.");
+                    Console.WriteLine("\n\t! FAILED. Account don't match. Please try again !");
+                    Thread.Sleep(2200);
+                    Console.Clear();
+                    Login();
                 }
             } while (!konekService.ValidateAccount(inputNumber, userPin));
             Console.Clear();
-            mainMenu();
+            MainMenu();
             Console.WriteLine();
         }
           
 
 
-        public void mainMenu()
+        public void MainMenu()
         {
             Console.WriteLine("\t\tWelcome to Konek App!");
             BorderText();
@@ -64,19 +65,28 @@ namespace KonekApplication
                 }
                 else if (KonekService.choiceMenu == 1)
                 {
+                    Console.Clear();
+
                     LoadMenu();
                 }
                 else if (KonekService.choiceMenu == 2)
                 {
+                    Console.Clear();
+
                     PromoMenu();                                // promo menu
                 }
                 else if (KonekService.choiceMenu == 3)
                 {
-                    AccountDisplay();
+                    Console.Clear();
+
+                    AccountDisplay();                           // checks account info
                 }
                 else
                 {
                     InvalidDisplay();
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    MainMenu();
                 }
             }
         }
@@ -92,16 +102,21 @@ namespace KonekApplication
             if (KonekService.loadAmount == KonekService.secretBack)
             {
                 HalfBorderText();
-                Console.WriteLine("    ! Returning to main menu... !");
+                Console.WriteLine("    ! Returning to main menu !");
                 HalfBorderText(); Thread.Sleep(2200);
+                Console.Clear();
+                MainMenu();
             }
             else if (KonekService.loadAmount < 10)
             {
                 Thread.Sleep(420);
                 HalfBorderText();
-                Console.WriteLine("    ! Minimum load is 10 pesos !");
+                Console.WriteLine("    ! Transaction Unsuccessful !\n" +
+                    "    ! Minimum load is 10 pesos !");
                 HalfBorderText();
-                Thread.Sleep(500);
+                Thread.Sleep(2800);
+                Console.Clear();
+                MainMenu();
             }
             else
             {
@@ -109,7 +124,9 @@ namespace KonekApplication
                 LoadSuccessDisplay();
                 Thread.Sleep(300);
                 BorderText();
-                Thread.Sleep(300);
+                Thread.Sleep(2800);
+                Console.Clear();
+                MainMenu();
             }
         }
 
@@ -129,35 +146,47 @@ namespace KonekApplication
             if (KonekService.choicePromo == 0)
             {
                 BorderText();
-                return;
+                Console.Clear();
+                MainMenu();
             }
             else if (KonekService.choicePromo < 1 || KonekService.choicePromo > 4)
             {
                 InvalidDisplay();
-                return;
+                Thread.Sleep(2000);
+                PromoMenu();
             }
 
             if (konekService.CanPurchasePromo(inputNumber))
             {
-                konekService.PromoLoadUpdate(inputNumber);
                 PromoNamer();
+                konekService.PromoLoadUpdate(inputNumber);
                 PromoSuccessDisplay();
                 BorderText();
                 SoundEffects();
+                Thread.Sleep(2000);
+                Console.Clear();
+                MainMenu();
             }
             else
             {
                 Insufficient();
+                Thread.Sleep(2500);
+                Console.Clear();
+                PromoMenu();
             }
         }
 
         
      
-        // CHECK ACCOUNT || Displays the balance and current active promo
+        // CHECK ACCOUNT || Displays the account's details, balance and current active promo
         public void AccountDisplay()
         {
             BorderText();
-            Console.WriteLine("\tLoad Balance: [" + konekService.GetAccountBalance(inputNumber) + "]");
+            Console.WriteLine("INFORMATION:\n");
+            Console.WriteLine("User: [" + konekService.GetAccountName(inputNumber) + "]");
+            Console.WriteLine("Email: [" + konekService.GetAccountEmail(inputNumber) + "]\n");
+            Console.WriteLine("Load Balance: [" + konekService.GetAccountBalance(inputNumber) + "]");
+            Console.WriteLine("Reward Points: [" + konekService.GetAccountRewardPoints(inputNumber) + "]");
             CheckActivePromo();
             BorderText();
         }
@@ -165,15 +194,16 @@ namespace KonekApplication
         // CHECK ACCOUNT || this check the active promo. then prints only the active promo specifically the active promo print
         public void CheckActivePromo()
         {
-            if (konekService.SubscriptionChecker(inputNumber))
+            string promoName = konekService.GetActivePromo(inputNumber);
+            if (!string.IsNullOrEmpty(promoName))
             {
-                Console.WriteLine("\tActive Promo: [" + KonekService.promoName + "]");
+                Console.WriteLine("Active Promo: [" + promoName + "]");
             }
             else
             {
-                Console.WriteLine("\tNo active promo or insufficient load.");
+                Console.WriteLine("Active Promo: [No Active Promo.]");
             }
-        }
+        }   
 
         // displays the name of the active promo. displays the specific promo chosen by the user.
         // nilagyan lang ng katumbas na string (supposedly... kaso hindi na gumana nung sineparate na yung data sa business logic)
@@ -237,90 +267,5 @@ namespace KonekApplication
         {
             new MainApplication();
         }
-
     }
 }
-
-/*
-        public void LoadMenu()
-        {
-            BorderText();
-            Console.WriteLine("LOAD MENU:\n");
-            Console.Write("Enter Load Amount: ");
-            KonekService.loadAmount = Convert.ToInt32(Console.ReadLine());
-
-            if (KonekService.loadAmount == KonekService.secretBack)
-            {
-                HalfBorderText();
-                Console.WriteLine("    ! Returning to main menu... !");
-                HalfBorderText(); Thread.Sleep(2200); // a visual delay
-            }
-            else if (KonekService.loadAmount < 10)
-            {
-                Thread.Sleep(420);
-                HalfBorderText();
-                Console.WriteLine("    ! Minimum load is 10 pesos !");
-                HalfBorderText();
-                Thread.Sleep(500);
-            }
-            else
-            {
-                KonekService.LoadProcess();
-                LoadSuccessDisplay();
-                Thread.Sleep(300);
-                BorderText();
-                Thread.Sleep(300);
-            }
-        }
-        
-
-        public void PromoMenu()
-        {
-            BorderText();
-            Console.WriteLine("PROMO MENU:\n\n" +
-                "[1] Konek59\n" +
-                "[2] Konek99\n" +
-                "[3] Konek149\n" +
-                "[4] Konek300\n" +
-                "[0] Back\n");
-            Console.Write("Choose promo: ");
-            KonekService.choicePromo = Convert.ToInt32(Console.ReadLine());
-
-            if (KonekService.choicePromo == 0) // returns you to main menu
-            {
-                BorderText();
-                return;
-            }
-            else if (KonekService.choicePromo < 1 || KonekService.choicePromo > 4)
-            {
-                InvalidDisplay(); // error promo choice
-                return;
-            }
-
-            if (KonekService.CanPurchasePromo())
-            {
-                KonekService.PromoLoadUpdate();
-                PromoNamer();
-                PromoSuccessDisplay();
-                BorderText();
-                SoundEffects();
-            }
-            else if (!KonekService.CanPurchasePromo())
-            {
-                Insufficient();
-            }
-        }
-
-
-        public void CheckActivePromo()
-        {
-            if (KonekService.SubscriptionChecker != null)
-            {
-                Console.WriteLine("\tActive Promo: [" + KonekService.promoName + "]");
-            }
-            else
-            {
-                Console.WriteLine("\t ! ERROR ! ");
-            }
-        }
-        */

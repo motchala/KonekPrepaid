@@ -21,6 +21,7 @@
         public string Email { get; set; }
         public string AccountName { get; set; }
         public double LoadBalance { get; set; }
-        
+        public string ActivePromo { get; set; } = "";
+        public double TotalRewardPoints {  get; set; }
     }
 }
