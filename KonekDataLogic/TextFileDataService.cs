@@ -203,7 +203,7 @@ namespace KonekDataServices
     public class TextFileDataService : IKonekDataService
     {
         List<KonekAccount> konAccounts = new List<KonekAccount>();
-        string filePath = "accounts_Txt.txt";0
+        string filePath = "accounts_Txt.txt";
 
         public TextFileDataService()
         {
