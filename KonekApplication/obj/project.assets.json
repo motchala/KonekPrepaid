@@ -12,24 +12,24 @@
           "bin/placeholder/KonekCommon.dll": {}
         }
       },
-      "KonekDataService/1.0.0": {
+      "KonekDataServices/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "KonekCommon": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/KonekDataService.dll": {}
+          "bin/placeholder/KonekDataServices.dll": {}
         },
         "runtime": {
-          "bin/placeholder/KonekDataService.dll": {}
+          "bin/placeholder/KonekDataServices.dll": {}
         }
       },
       "KonekLogicProcess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "KonekDataService": "1.0.0"
+          "KonekDataServices": "1.0.0"
         },
         "compile": {
           "bin/placeholder/KonekLogicProcess.dll": {}
@@ -46,10 +46,10 @@
       "path": "../KonekCommon/KonekCommon.csproj",
       "msbuildProject": "../KonekCommon/KonekCommon.csproj"
     },
-    "KonekDataService/1.0.0": {
+    "KonekDataServices/1.0.0": {
       "type": "project",
-      "path": "../KonekDataLogic/KonekDataService.csproj",
-      "msbuildProject": "../KonekDataLogic/KonekDataService.csproj"
+      "path": "../KonekDataLogic/KonekDataServices.csproj",
+      "msbuildProject": "../KonekDataLogic/KonekDataServices.csproj"
     },
     "KonekLogicProcess/1.0.0": {
       "type": "project",

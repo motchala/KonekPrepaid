@@ -5,8 +5,9 @@ namespace KonekApplication
 {
     internal class MainApplication
     {
-        KonekLogicProcess.KonekService konekService = new KonekLogicProcess.KonekService();
+        KonekService konekService = new KonekService();
         static string inputNumber = string.Empty;
+        static string inputEmail = string.Empty;
         public MainApplication()
         {
             Login();
@@ -153,6 +154,7 @@ namespace KonekApplication
             {
                 InvalidDisplay();
                 Thread.Sleep(2000);
+                Console.Clear();
                 PromoMenu();
             }
 

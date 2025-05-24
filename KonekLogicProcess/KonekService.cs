@@ -4,7 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using KonekDataService;
+using KonekCommon;
+using KonekDataServices;
 
 
 // manages the variables, as well as the logic of functions from the main application
@@ -12,7 +13,8 @@ namespace KonekLogicProcess
 {
     public class KonekService
     {
-        AccountDataService DataService = new AccountDataService();
+        KonekDataService DataService = new KonekDataService();
+        //InMemoryDataService MemoryService = new InMemoryDataService();
         
         public static int choiceMenu;           // getting main menu input
         public static int loadAmount;           // getting load amount input
@@ -28,7 +30,7 @@ namespace KonekLogicProcess
         // this checks the validity of the inputted account on the Login part
         public bool ValidateAccount(string accountNumber, string userPin)
         {
-            return DataService.ValidateKonekAccount(accountNumber, userPin);
+            return ValidateKonekAccount(accountNumber, userPin);
         }
 
         // this takes the account info when checking for ano, when choosing Check Account on the main menu 
@@ -176,6 +178,50 @@ namespace KonekLogicProcess
         public string GetActivePromo(string accountNumber)
         {
             return DataService.GetAccountPromo(accountNumber);
+        }
+
+
+
+
+
+
+
+        
+
+
+
+
+        public bool ValidateKonekAccount(string accountNumber, string userPin)
+        {
+            var account = GetKonekAccount(accountNumber, userPin);
+
+            if (account.PhoneNumber != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private KonekAccount GetKonekAccount(string accountNumber, string PIN)
+        {
+            var konekAccount = DataService.GetAllAccounts();
+            var foundAccount = new KonekAccount();
+
+            foreach (var account in konekAccount)
+            {
+                if (account.PhoneNumber == accountNumber && account.Pin == PIN)
+                {
+                    foundAccount = account;
+                }
+            }
+            return foundAccount;
+        }
+
+        public double GetAccountBalance(string accountNumber, string PIN)
+        {
+            var konekAccount = GetKonekAccount(accountNumber, PIN);
+            return konekAccount.LoadBalance;
         }
     }
 }

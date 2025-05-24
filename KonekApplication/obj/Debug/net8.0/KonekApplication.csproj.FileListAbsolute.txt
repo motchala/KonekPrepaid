@@ -45,11 +45,9 @@ C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\De
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekApplication.dll
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekApplication.pdb
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekCommon.dll
-C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekDataService.dll
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekLogicProcess.dll
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekLogicProcess.pdb
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekCommon.pdb
-C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekDataService.pdb
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\obj\Debug\net8.0\KonekApplication.csproj.AssemblyReference.cache
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\obj\Debug\net8.0\KonekApplication.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\obj\Debug\net8.0\KonekApplication.AssemblyInfoInputs.cache
@@ -62,3 +60,5 @@ C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\obj\De
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\obj\Debug\net8.0\KonekApplication.pdb
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\obj\Debug\net8.0\KonekApplication.genruntimeconfig.cache
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\obj\Debug\net8.0\ref\KonekApplication.dll
+C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekDataServices.dll
+C:\Users\Frederick\source\repos\Integrative Programming1\KonekApplication\bin\Debug\net8.0\KonekDataServices.pdb

@@ -22,12 +22,12 @@
           }
         }
       },
-      "KonekDataService/1.0.0": {
+      "KonekDataServices/1.0.0": {
         "dependencies": {
           "KonekCommon": "1.0.0"
         },
         "runtime": {
-          "KonekDataService.dll": {
+          "KonekDataServices.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -35,7 +35,7 @@
       },
       "KonekLogicProcess/1.0.0": {
         "dependencies": {
-          "KonekDataService": "1.0.0"
+          "KonekDataServices": "1.0.0"
         },
         "runtime": {
           "KonekLogicProcess.dll": {
@@ -57,7 +57,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "KonekDataService/1.0.0": {
+    "KonekDataServices/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

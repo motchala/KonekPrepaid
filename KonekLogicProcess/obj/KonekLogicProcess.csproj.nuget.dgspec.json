@@ -69,12 +69,12 @@
         }
       }
     },
-    "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataService.csproj": {
+    "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataService.csproj",
-        "projectName": "KonekDataService",
-        "projectPath": "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataService.csproj",
+        "projectUniqueName": "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataServices.csproj",
+        "projectName": "KonekDataServices",
+        "projectPath": "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataServices.csproj",
         "packagesPath": "C:\\Users\\Frederick\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\obj\\",
         "projectStyle": "PackageReference",
@@ -166,8 +166,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataService.csproj": {
-                "projectPath": "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataService.csproj"
+              "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataServices.csproj": {
+                "projectPath": "C:\\Users\\Frederick\\source\\repos\\Integrative Programming1\\KonekDataLogic\\KonekDataServices.csproj"
               }
             }
           }

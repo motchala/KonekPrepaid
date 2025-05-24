@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekApplication", "KonekAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekLogicProcess", "..\KonekLogicProcess\KonekLogicProcess.csproj", "{09C2F02E-2CD1-4B18-B260-D6087603F521}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekDataService", "..\KonekDataLogic\KonekDataService.csproj", "{4E691F3F-F403-473C-8E8E-29DE2D1C1483}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekDataServices", "..\KonekDataLogic\KonekDataServices.csproj", "{4E691F3F-F403-473C-8E8E-29DE2D1C1483}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekCommon", "..\KonekCommon\KonekCommon.csproj", "{B1AFE7BD-9FDA-4883-8429-CF9782DAA2B0}"
 EndProject
