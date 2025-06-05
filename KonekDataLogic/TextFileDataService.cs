@@ -194,6 +194,8 @@ namespace KonekDataServices
 
 
 
+
+
 using KonekCommon;
 using System;
 using System.Security.Principal;
@@ -207,7 +209,7 @@ namespace KonekDataServices
 
         public TextFileDataService()
         {
-            GetDataFromFile();
+            GetDataFromFile();  
         }
 
 

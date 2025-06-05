@@ -8,8 +8,8 @@ namespace KonekDataServices
 
         public KonekDataService()
         {
-            iDataService = new TextFileDataService();
-            // iDataService = new InMemoryDataService();
+           // iDataService = new TextFileDataService();
+             iDataService = new InMemoryDataService();
             // iDataService = new JsonFileDataService();
         }
 

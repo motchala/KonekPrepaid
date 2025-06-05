@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KonekLogicProcess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8d4f3d5c1eb3d9ce3320067159c5717403344d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a46999040c98ee53262a7c61f9a1651b42103483")]
 [assembly: System.Reflection.AssemblyProductAttribute("KonekLogicProcess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KonekLogicProcess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
