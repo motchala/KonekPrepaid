@@ -1,0 +1,25 @@
+﻿
+
+
+
+
+! if you have just cloned this program of mine, then you should follow these steps to run the system completely. !
+
+
+these files are for copy and pasting purposes, so that the system can run as intended.
+the files above aren't the ones being used by the system, hence why you need to copy and paste them inside the main class.
+
+
+
+
+STEPS TO COMPLETE:
+
+1. Copy the 3 files from this project folder (Text File, Json File, SQL File)
+2. After copying, go to the "KonekApplication" project folder
+3. Open "Debug" folder > then open "net8.0" folder
+4. Paste the 3 files inside that folder (you should see tons of files and folders from that folder)
+5. Done! Run the program, and that's it! It should be working now
+
+
+
+

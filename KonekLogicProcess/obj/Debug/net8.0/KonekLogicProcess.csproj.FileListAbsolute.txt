@@ -22,8 +22,6 @@ C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\obj\Debug\net8.0\
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\obj\Debug\net8.0\KonekLogicProcess.pdb
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\obj\Debug\net8.0\ref\KonekLogicProcess.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\bin\Debug\net8.0\KonekCommon.dll
-C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\bin\Debug\net8.0\KonekDataService.dll
-C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\bin\Debug\net8.0\KonekDataService.pdb
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\bin\Debug\net8.0\KonekCommon.pdb
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\obj\Debug\net8.0\KonekLogicProcess.csproj.AssemblyReference.cache
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\obj\Debug\net8.0\KonekLog.CC75076A.Up2Date
@@ -45,3 +43,5 @@ C:\Users\Frederick\source\repos\Integrative Programming1\KonekLogicProcess\obj\D
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekLogicProcess\obj\Debug\net8.0\ref\KonekLogicProcess.dll
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekLogicProcess\bin\Debug\net8.0\KonekDataServices.dll
 C:\Users\Frederick\source\repos\Integrative Programming1\KonekLogicProcess\bin\Debug\net8.0\KonekDataServices.pdb
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\bin\Debug\net8.0\KonekDataServices.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekLogicProcess\bin\Debug\net8.0\KonekDataServices.pdb
