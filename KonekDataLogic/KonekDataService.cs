@@ -8,9 +8,10 @@ namespace KonekDataServices
 
         public KonekDataService()
         {
-           // iDataService = new TextFileDataService();
              iDataService = new InMemoryDataService();
+            // iDataService = new TextFileDataService();
             // iDataService = new JsonFileDataService();
+            // iDataService = new DBDataService();
         }
 
         public List<KonekAccount> GetAllAccounts()
@@ -176,9 +177,9 @@ namespace KonekDataServices
 
 
 
+// trial and error na code haha pagaaralan ko pa like ano mga mali ko rito
 
-
-/*
+/* 
 using KonekCommon;
 
 namespace KonekDataServices
@@ -344,13 +345,6 @@ namespace KonekDataServices
     }
 }
 */
-
-
-
-
-
-
-
 
 
 /*

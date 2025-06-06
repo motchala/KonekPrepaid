@@ -1,5 +1,4 @@
-﻿using System.Security.Principal;
-using System.Text.Json;
+﻿using System.Text.Json;
 using KonekCommon;
 
 namespace KonekDataServices
