@@ -1,0 +1,29 @@
+[
+    {
+        "PhoneNumber": "09662668443",
+        "Pin": "1234",
+        "Email": "iamfrederickr@gmail.com",
+        "AccountName": "Frederick Rosales",
+        "LoadBalance": 70,
+        "TotalRewardPoints": 1.25
+    },
+    {
+        "PhoneNumber": "09073738134",
+        "Pin": "0101",
+        "Email": "tepot@gmail.com",
+        "AccountName": "Kuya Tepot",
+        "LoadBalance": 450,
+        "TotalRewardPoints": 0.75
+    },
+    {
+        "PhoneNumber": "09163932930",
+        "Pin": "1111",
+        "Email": "iseng@gmail.com",
+        "AccountName": "Manang Iseng",
+        "LoadBalance": 15,
+        "TotalRewardPoints": 2.15
+    }
+]
+
+// this specific file is not the one being used by the system. it's on the KonekApplication project folder.
+// this is just for viewing purposes.

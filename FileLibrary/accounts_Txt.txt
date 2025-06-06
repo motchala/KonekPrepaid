@@ -1,0 +1,11 @@
+09123456789|0011|alfred@gmail.com|Alfred Gualberto|40|0.25
+09808000000|8080|yvette@gmail.com|Yvette Bullet|290|0.6
+09111100000|2222|jehem@gmail.com|Jehem CodKing|45|1.15
+09396590005|4321|gabr-e-l@gmail.com|Aiello L|7701|13.85
+
+
+
+
+
+// this specific file is not the one being used by the system. it's on the KonekApplication project folder.
+// this is just for viewing purposes.
