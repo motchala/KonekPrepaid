@@ -7,7 +7,7 @@ namespace KonekApplication
     {
         KonekService konekService = new KonekService();
         static string inputNumber = string.Empty;
-        static string inputEmail = string.Empty;
+        // static string inputEmail = string.Empty;
         public MainApplication()
         {
             Login();
