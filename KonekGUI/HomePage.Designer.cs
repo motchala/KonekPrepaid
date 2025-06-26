@@ -161,7 +161,7 @@
             button7.Name = "button7";
             button7.Size = new Size(205, 39);
             button7.TabIndex = 3;
-            button7.Text = "Back";
+            button7.Text = "Exit";
             button7.UseVisualStyleBackColor = true;
             button7.Visible = false;
             button7.Click += button7_Click;

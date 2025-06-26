@@ -55,10 +55,8 @@ namespace KonekGUI
         }
         private void button20_Click(object sender, EventArgs e)
         {
-            // Button Back from Settings
-            button17.Visible = false;
-            button19.Visible = false;
-            button20.Visible = false;
+            // Button Exit from Settings
+            this.Close();
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -341,6 +339,11 @@ namespace KonekGUI
         }
 
         private void Promo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
         {
 
         }

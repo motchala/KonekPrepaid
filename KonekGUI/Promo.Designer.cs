@@ -51,8 +51,6 @@
             panel5 = new Panel();
             label10 = new Label();
             button15 = new Button();
-            textBox1 = new TextBox();
-            label6 = new Label();
             panel4 = new Panel();
             panel6 = new Panel();
             label7 = new Label();
@@ -68,6 +66,8 @@
             button17 = new Button();
             button19 = new Button();
             button20 = new Button();
+            panel9 = new Panel();
+            panel10 = new Panel();
             panel3.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -363,22 +363,6 @@
             button15.UseVisualStyleBackColor = true;
             button15.Click += button15_Click;
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(185, 232);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 27);
-            textBox1.TabIndex = 7;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(62, 235);
-            label6.Name = "label6";
-            label6.Size = new Size(108, 20);
-            label6.TabIndex = 8;
-            label6.Text = "Search Promo :";
-            // 
             // panel4
             // 
             panel4.BackColor = Color.DarkGray;
@@ -544,22 +528,41 @@
             button20.Name = "button20";
             button20.Size = new Size(205, 39);
             button20.TabIndex = 16;
-            button20.Text = "Back";
+            button20.Text = "Exit";
             button20.UseVisualStyleBackColor = true;
             button20.Visible = false;
             button20.Click += button20_Click;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.DarkSlateGray;
+            panel9.BorderStyle = BorderStyle.FixedSingle;
+            panel9.Location = new Point(27, 198);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(611, 22);
+            panel9.TabIndex = 19;
+            panel9.Paint += panel9_Paint;
+            // 
+            // panel10
+            // 
+            panel10.BackColor = Color.DarkSlateGray;
+            panel10.BorderStyle = BorderStyle.FixedSingle;
+            panel10.Location = new Point(27, 226);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(611, 22);
+            panel10.TabIndex = 20;
             // 
             // Promo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(661, 615);
+            Controls.Add(panel10);
+            Controls.Add(panel9);
             Controls.Add(panel5);
             Controls.Add(button17);
             Controls.Add(button19);
             Controls.Add(button20);
-            Controls.Add(label6);
-            Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(panel3);
             Controls.Add(panel2);
@@ -609,8 +612,6 @@
         private Label label2;
         private Label label5;
         private Label label4;
-        private TextBox textBox1;
-        private Label label6;
         private Panel panel5;
         private Button button15;
         private Label label10;
@@ -632,5 +633,7 @@
         private Button button17;
         private Button button19;
         private Button button20;
+        private Panel panel9;
+        private Panel panel10;
     }
 }

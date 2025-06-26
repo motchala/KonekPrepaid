@@ -31,8 +31,10 @@ namespace KonekGUI
 
             if (!konekService.ValidateAccount(inputNumber, KonekService.userPin)) // false
             {
-                MessageBox.Show("! FAILED. Account don't match. Please try again !");
+                MessageBox.Show("Account don't match. Please try again!");
                 // clear the text boxes
+                textBox1.Text = "";
+                textBox2.Text = "";
             }
             else
             {  // true
@@ -49,11 +51,13 @@ namespace KonekGUI
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            // phone number
 
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)   
         {
+            // password
 
         }
 
