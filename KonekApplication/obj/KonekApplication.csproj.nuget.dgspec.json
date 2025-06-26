@@ -32,6 +32,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "C:\\Users\\Frederick\\Source\\Repos\\KonekPrepaid\\KonekCommon\\KonekCommon.csproj": {
+                "projectPath": "C:\\Users\\Frederick\\Source\\Repos\\KonekPrepaid\\KonekCommon\\KonekCommon.csproj"
+              },
               "C:\\Users\\Frederick\\Source\\Repos\\KonekPrepaid\\KonekLogicProcess\\KonekLogicProcess.csproj": {
                 "projectPath": "C:\\Users\\Frederick\\Source\\Repos\\KonekPrepaid\\KonekLogicProcess\\KonekLogicProcess.csproj"
               }

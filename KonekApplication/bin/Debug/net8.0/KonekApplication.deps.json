@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "KonekApplication/1.0.0": {
         "dependencies": {
+          "KonekCommon": "1.0.0",
           "KonekLogicProcess": "1.0.0"
         },
         "runtime": {

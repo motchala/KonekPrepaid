@@ -1,10 +1,12 @@
 ﻿using KonekLogicProcess;
+using KonekCommon;
 namespace KonekApplication
 // runs the whole application, takes care of the UI and UI its processes
 
 {
     internal class MainApplication
     {
+        List<KonekAccount> accountList = new List<KonekAccount>(); // from KonekCommon. testing lang sa signup functionality
         KonekService konekService = new KonekService();
         static string inputNumber = string.Empty;
         // static string inputEmail = string.Empty;
@@ -13,12 +15,9 @@ namespace KonekApplication
             Login();
         }
 
-
-
-
+        
         public void Login()
         {
-            string userPin = string.Empty;
                 Console.Write("Konek LOGIN\n\n");
 
             do
@@ -27,16 +26,16 @@ namespace KonekApplication
                 inputNumber = Console.ReadLine();
 
                 Console.Write("Enter Password: ");
-                userPin = Console.ReadLine();
+                KonekService.userPin = Console.ReadLine();
 
-                if (!konekService.ValidateAccount(inputNumber, userPin))
+                if (!konekService.ValidateAccount(inputNumber, KonekService.userPin)) // false
                 {
                     Console.WriteLine("\n\t! FAILED. Account don't match. Please try again !");
                     Thread.Sleep(2200);
                     Console.Clear();
                     Login();
                 }
-            } while (!konekService.ValidateAccount(inputNumber, userPin));
+            } while (!konekService.ValidateAccount(inputNumber, KonekService.userPin)); // true
             Console.Clear();
             MainMenu();
             Console.WriteLine();
@@ -161,10 +160,8 @@ namespace KonekApplication
             if (konekService.CanPurchasePromo(inputNumber))
             {
                 PromoNamer();
-                konekService.PromoLoadUpdate(inputNumber);
+                konekService.UpdatesLoadBalance_FromPromo(inputNumber);
                 PromoSuccessDisplay();
-                BorderText();
-                SoundEffects();
                 Thread.Sleep(2000);
                 Console.Clear();
                 MainMenu();
@@ -184,7 +181,7 @@ namespace KonekApplication
         public void AccountDisplay()
         {
             BorderText();
-            Console.WriteLine("INFORMATION:\n");
+            Console.WriteLine("ACCOUNT DETAILS:\n");
             Console.WriteLine("User: [" + konekService.GetAccountName(inputNumber) + "]");
             Console.WriteLine("Email: [" + konekService.GetAccountEmail(inputNumber) + "]\n");
             Console.WriteLine("Load Balance: [" + konekService.GetAccountBalance(inputNumber) + "]");
@@ -203,7 +200,7 @@ namespace KonekApplication
             }
             else
             {
-                Console.WriteLine("Active Promo: [No Active Promo.]");
+                Console.WriteLine("No Active Promo");
             }
         }   
 
@@ -256,6 +253,8 @@ namespace KonekApplication
         {
             Thread.Sleep(1000);
             Console.WriteLine("\n\t[You're now subscribed to " + KonekService.promoName + " promo]");
+            BorderText();
+            SoundEffects();
         }
         public void InvalidDisplay()
         {

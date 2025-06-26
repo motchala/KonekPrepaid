@@ -16,6 +16,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekCommon", "..\KonekComm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileLibrary", "..\FileLibrary\FileLibrary.csproj", "{90115169-B8A9-4FD1-991B-863742E2A9A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonekGUI", "..\KonekGUI\KonekGUI.csproj", "{AE1D3C42-CF84-4A1E-86BE-5E47E8AACF94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{90115169-B8A9-4FD1-991B-863742E2A9A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90115169-B8A9-4FD1-991B-863742E2A9A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90115169-B8A9-4FD1-991B-863742E2A9A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE1D3C42-CF84-4A1E-86BE-5E47E8AACF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE1D3C42-CF84-4A1E-86BE-5E47E8AACF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE1D3C42-CF84-4A1E-86BE-5E47E8AACF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE1D3C42-CF84-4A1E-86BE-5E47E8AACF94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

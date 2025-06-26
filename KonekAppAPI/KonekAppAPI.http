@@ -1,0 +1,6 @@
+@KonekAppAPI_HostAddress = http://localhost:5283
+
+GET {{KonekAppAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
