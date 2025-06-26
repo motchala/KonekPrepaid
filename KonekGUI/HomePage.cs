@@ -66,7 +66,7 @@ namespace KonekGUI
         private void button9_Click(object sender, EventArgs e)
         {
             // Log-out button
-            Login loginForm = new Login();
+            Login loginForm = new Login(konekService);
             loginForm.Show();
             this.Hide();
         }
