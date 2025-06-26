@@ -337,7 +337,7 @@
             button19.Name = "button19";
             button19.Size = new Size(205, 39);
             button19.TabIndex = 6;
-            button19.Text = "Back";
+            button19.Text = "Exit";
             button19.UseVisualStyleBackColor = true;
             button19.Visible = false;
             button19.Click += button19_Click;

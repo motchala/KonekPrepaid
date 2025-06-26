@@ -68,10 +68,8 @@ namespace KonekGUI
 
         private void button19_Click(object sender, EventArgs e)
         {
-            // Button Back from Settings
-            button17.Visible = false;
-            button18.Visible = false;
-            button19.Visible = false;
+            // Button Exit from Settings
+            this.Close();
         }
 
         private void button17_Click(object sender, EventArgs e)

@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label6 = new Label();
-            textBox1 = new TextBox();
             label1 = new Label();
             panel3 = new Panel();
             button6 = new Button();
@@ -47,13 +45,13 @@
             label10 = new Label();
             button15 = new Button();
             panel2 = new Panel();
+            panel7 = new Panel();
+            button12 = new Button();
+            label9 = new Label();
             button8 = new Button();
             button9 = new Button();
             label2 = new Label();
             label3 = new Label();
-            panel7 = new Panel();
-            button12 = new Button();
-            label9 = new Label();
             panel8 = new Panel();
             label11 = new Label();
             button16 = new Button();
@@ -68,7 +66,8 @@
             button17 = new Button();
             button19 = new Button();
             button20 = new Button();
-            button21 = new Button();
+            panel10 = new Panel();
+            panel9 = new Panel();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
@@ -78,22 +77,6 @@
             panel8.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(62, 233);
-            label6.Name = "label6";
-            label6.Size = new Size(114, 20);
-            label6.TabIndex = 21;
-            label6.Text = "Search Reward :";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(185, 230);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(270, 27);
-            textBox1.TabIndex = 20;
             // 
             // label1
             // 
@@ -299,6 +282,43 @@
             panel2.TabIndex = 19;
             panel2.Paint += panel2_Paint;
             // 
+            // panel7
+            // 
+            panel7.BackColor = Color.DarkGray;
+            panel7.Controls.Add(button12);
+            panel7.Controls.Add(label9);
+            panel7.Location = new Point(0, 166);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(136, 128);
+            panel7.TabIndex = 8;
+            panel7.Visible = false;
+            panel7.Paint += panel7_Paint;
+            // 
+            // button12
+            // 
+            button12.FlatAppearance.BorderSize = 0;
+            button12.FlatStyle = FlatStyle.Flat;
+            button12.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button12.ForeColor = Color.Black;
+            button12.Location = new Point(37, 40);
+            button12.Name = "button12";
+            button12.Size = new Size(56, 51);
+            button12.TabIndex = 2;
+            button12.Text = "<<";
+            button12.UseVisualStyleBackColor = true;
+            button12.Click += button12_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.Black;
+            label9.Location = new Point(37, 6);
+            label9.Name = "label9";
+            label9.Size = new Size(56, 20);
+            label9.TabIndex = 0;
+            label9.Text = "Page 2:";
+            // 
             // button8
             // 
             button8.FlatAppearance.BorderSize = 0;
@@ -349,43 +369,6 @@
             label3.Size = new Size(56, 20);
             label3.TabIndex = 1;
             label3.Text = "Page 1:";
-            // 
-            // panel7
-            // 
-            panel7.BackColor = Color.DarkGray;
-            panel7.Controls.Add(button12);
-            panel7.Controls.Add(label9);
-            panel7.Location = new Point(0, 166);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(136, 128);
-            panel7.TabIndex = 8;
-            panel7.Visible = false;
-            panel7.Paint += panel7_Paint;
-            // 
-            // button12
-            // 
-            button12.FlatAppearance.BorderSize = 0;
-            button12.FlatStyle = FlatStyle.Flat;
-            button12.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button12.ForeColor = Color.Black;
-            button12.Location = new Point(37, 40);
-            button12.Name = "button12";
-            button12.Size = new Size(56, 51);
-            button12.TabIndex = 2;
-            button12.Text = "<<";
-            button12.UseVisualStyleBackColor = true;
-            button12.Click += button12_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label9.ForeColor = Color.Black;
-            label9.Location = new Point(37, 6);
-            label9.Name = "label9";
-            label9.Size = new Size(56, 20);
-            label9.TabIndex = 0;
-            label9.Text = "Page 2:";
             // 
             // panel8
             // 
@@ -545,36 +528,39 @@
             button20.Name = "button20";
             button20.Size = new Size(205, 39);
             button20.TabIndex = 24;
-            button20.Text = "Back";
+            button20.Text = "Exit";
             button20.UseVisualStyleBackColor = true;
             button20.Visible = false;
             button20.Click += button20_Click;
             // 
-            // button21
+            // panel10
             // 
-            button21.FlatAppearance.BorderColor = Color.Gainsboro;
-            button21.FlatAppearance.BorderSize = 0;
-            button21.FlatStyle = FlatStyle.Flat;
-            button21.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button21.ForeColor = Color.Black;
-            button21.Location = new Point(461, 219);
-            button21.Name = "button21";
-            button21.Size = new Size(44, 42);
-            button21.TabIndex = 27;
-            button21.Text = "🔍︎";
-            button21.UseVisualStyleBackColor = true;
+            panel10.BackColor = Color.DarkSlateGray;
+            panel10.BorderStyle = BorderStyle.FixedSingle;
+            panel10.Location = new Point(27, 221);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(611, 22);
+            panel10.TabIndex = 28;
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.DarkSlateGray;
+            panel9.BorderStyle = BorderStyle.FixedSingle;
+            panel9.Location = new Point(27, 193);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(611, 22);
+            panel9.TabIndex = 27;
             // 
             // Reward
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(661, 615);
-            Controls.Add(button21);
+            Controls.Add(panel10);
+            Controls.Add(panel9);
             Controls.Add(button17);
             Controls.Add(button19);
             Controls.Add(button20);
-            Controls.Add(label6);
-            Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(panel3);
             Controls.Add(panel4);
@@ -606,9 +592,6 @@
         }
 
         #endregion
-
-        private Label label6;
-        private TextBox textBox1;
         private Label label1;
         private Panel panel3;
         private Button button6;
@@ -647,6 +630,7 @@
         private Button button17;
         private Button button19;
         private Button button20;
-        private Button button21;
+        private Panel panel10;
+        private Panel panel9;
     }
 }

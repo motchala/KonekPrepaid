@@ -30,7 +30,7 @@ namespace KonekGUI
         private void button2_Click(object sender, EventArgs e)
         {
             Load loadForm = new Load(konekService);
-            //loadForm.Show();
+            loadForm.Show();
             this.Hide();
         }
 
@@ -92,10 +92,8 @@ namespace KonekGUI
 
         private void button7_Click(object sender, EventArgs e)
         {
-            // Back Button from Settings
-            button7.Visible = false;
-            button8.Visible = false;
-            button9.Visible = false;
+            // Button Exit from Settings
+            this.Close();
         }
     }
 }
