@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="KonekCommon">
+      <HintPath>..\KonekLogicProcess\bin\Debug\net8.0\KonekCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="KonekDataServices">
+      <HintPath>..\KonekLogicProcess\bin\Debug\net8.0\KonekDataServices.dll</HintPath>
+    </Reference>
+    <Reference Include="KonekLogicProcess">
+      <HintPath>..\KonekLogicProcess\bin\Debug\net8.0\KonekLogicProcess.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

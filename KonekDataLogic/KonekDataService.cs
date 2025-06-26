@@ -72,6 +72,18 @@ namespace KonekDataServices
             }
             return "No Email";
         }
+        public string GetAccountNumberByPhoneNumber(string accountNumber)
+        {
+            var accounts = iDataService.GetAccounts();
+            for (int i = 0; i < accounts.Count; i++)
+            {
+                if (accounts[i].PhoneNumber == accountNumber)
+                {
+                    return accounts[i].PhoneNumber;
+                }
+            }
+            return "No Phone Number";
+        }
 
         public double GetAccountBalanceByPhoneNumber(string accountNumber)
         {
@@ -114,6 +126,7 @@ namespace KonekDataServices
             }
         }
 
+        // takes the
         public string GetAccountPromo(string accountNumber)
         {
             var accounts = iDataService.GetAccounts();
@@ -126,6 +139,40 @@ namespace KonekDataServices
             }
             return "No active promo";
         }
+
+
+
+
+        // For REWARD PROMO CHOICES
+        public void UpdateAccountRewardPromo(string accountNumber, string reward)
+        {
+            var accounts = iDataService.GetAccounts();
+            for (int i = 0; i < accounts.Count; i++)
+            {
+                if (accounts[i].PhoneNumber == accountNumber)
+                {
+                    accounts[i].ActivePromo = reward;
+                    iDataService.UpdateAccount(accounts[i]);
+                    break;
+                }
+            }
+        }
+        public void UpdateAccountRewardPts(string accountNumber, double amount)
+        {
+            var accounts = iDataService.GetAccounts();
+            for (int i = 0; i < accounts.Count; i++)
+            {
+                if (accounts[i].PhoneNumber == accountNumber)
+                {
+                    accounts[i].TotalRewardPoints = amount;
+                    iDataService.UpdateAccount(accounts[i]);
+                    break;
+                }
+            }
+        }
+
+
+
 
         public double GetRewardPoints(string accountNumber)
         {
@@ -140,6 +187,22 @@ namespace KonekDataServices
             return 0;
         }
 
+        public string GetAccountRewardPromo(string accountNumber)
+        {
+            var accounts = iDataService.GetAccounts();
+            for (int i = 0; i < accounts.Count; i++)
+            {
+                if (accounts[i].PhoneNumber == accountNumber)
+                {
+                    return accounts[i].ActivePromo;
+                }
+            }
+            return "No active promo";
+        }
+
+
+
+        // for adding lang ng reward points after a transaction
         public void AddRewardPointsLoad(string accountNumber, double points)
         {
             var accounts = iDataService.GetAccounts();
@@ -169,338 +232,3 @@ namespace KonekDataServices
         }
     }
 }
-
-
-
-
-
-
-
-
-// trial and error na code haha pagaaralan ko pa like ano mga mali ko rito
-
-/* 
-using KonekCommon;
-
-namespace KonekDataServices
-{
-    public class KonekDataService
-    {
-        private TextFileDataService dataService;
-
-        public KonekDataService()
-        {
-            dataService = new TextFileDataService();
-        }
-
-        public List<KonekAccount> GetAllAccounts()
-        {
-            return dataService.GetAccounts();
-        }
-
-        public void AddAccount(KonekAccount konekAccount)
-        {
-            dataService.CreateAccount(konekAccount);
-        }
-
-        public void UpdateAccount(KonekAccount konekAccount)
-        {
-            dataService.UpdateAccount(konekAccount);
-        }
-
-        public void RemoveAccount(KonekAccount konekAccount)
-        {
-            dataService.RemoveAccount(konekAccount);
-        }
-
-        public bool ValidateKonekAccount(string accountNumber, string pin)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber && account.Pin == pin)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public string GetAccountNameByPhoneNumber(string accountNumber)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.AccountName;
-                }
-            }
-            return "No Balance !";
-        }
-
-        public string GetEmailByPhoneNumber(string accountNumber)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.Email;
-                }
-            }
-            return "No Email";
-        }
-
-        public double GetAccountBalanceByPhoneNumber(string accountNumber)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.LoadBalance;
-                }
-            }
-            return 0;
-        }
-
-        public void UpdateAccountBalance(string accountNumber, double amount)
-        {
-            var accountList = dataService.GetAccounts();
-            for (int i = 0; i < accountList.Count; i++)
-            {
-                if (accountList[i].PhoneNumber == accountNumber)
-                {
-                    accountList[i].LoadBalance = amount;
-                    dataService.UpdateAccount(accountList[i]);
-                }
-            }
-        }
-
-        public void UpdateAccountPromo(string accountNumber, string promo)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    account.ActivePromo = promo;
-                    dataService.UpdateAccount(account);
-                }
-            }
-        }
-
-        public string GetAccountPromo(string accountNumber)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.ActivePromo;
-                }
-            }
-            return "No active promo";
-        }
-
-        public double GetRewardPoints(string accountNumber)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.TotalRewardPoints;
-                }
-            }
-            return 0.0;
-        }
-
-        public void AddRewardPointsLoad(string accountNumber, double points)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    account.TotalRewardPoints += points;
-                    dataService.UpdateAccount(account);
-                }
-            }
-        }
-
-        public void AddRewardPointsPromo(string accountNumber, double points)
-        {
-            var accountList = dataService.GetAccounts();
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    account.TotalRewardPoints += points;
-                    dataService.UpdateAccount(account);
-                }
-            }
-        }
-    }
-}
-*/
-
-
-/*
-using KonekCommon;
-
-namespace KonekDataServices
-{
-    public class KonekDataService
-    {
-        IKonekDataService ikonekDataService;
-
-        public KonekDataService()
-        {
-            ikonekDataService = new TextFileDataService();
-            //ikonekDataService = new InMemoryDataService();
-            //ikonekDataService = new JsonFileDataService();
-
-        }
-        public List<KonekAccount> GetAllAccounts()
-        {
-            return ikonekDataService.GetAccounts();
-        }
-
-        public void AddAccount(KonekAccount konekAccount)
-        {
-            ikonekDataService.CreateAccount(konekAccount);
-        }
-
-        public void UpdateAccount(KonekAccount konekAccount)
-        {
-            ikonekDataService.UpdateAccount(konekAccount);
-        }
-
-        public void RemoveAccount(KonekAccount konekAccount)
-        {
-            ikonekDataService.RemoveAccount(konekAccount);
-        }
-
-
-
-
-        public bool ValidateKonekAccount(string accountNumber, string pin) // remove mo 'to mamaya please
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber && account.Pin == pin)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        public string GetAccountNameByPhoneNumber(string accountNumber)
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.AccountName;
-                }
-            }
-            return "No Balance !";
-        }
-
-        public string GetEmailByPhoneNumber(string accountNumber)
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.Email;
-                }
-            }
-            return "No Email";
-        }
-
-        public double GetAccountBalanceByPhoneNumber(string accountNumber)
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.LoadBalance;
-                }
-            }
-            return 0;
-        }
-
-        public void UpdateAccountBalance(string accountNumber, double amount)
-        {
-            for (int i = 0; i < accountList.Count; i++)
-            {
-                if (accountList[i].PhoneNumber == accountNumber)
-                {
-                    accountList[i].LoadBalance = amount;
-                }
-            }
-        }
-
-        public void UpdateAccountPromo(string accountNumber, string promo)
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    account.ActivePromo = promo;
-                }
-            }
-        }
-
-        public string GetAccountPromo(string accountNumber)
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.ActivePromo;
-                }
-            }
-            return "No active promo";
-        }
-
-        public double GetRewardPoints(string accountNumber)
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    return account.TotalRewardPoints;
-                }
-            }
-            return 0.0;
-        }
-
-        public void AddRewardPointsLoad(string accountNumber, double points)
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    account.TotalRewardPoints += points;
-                }
-            }
-        }
-        public void AddRewardPointsPromo(string accountNumber, double points)
-        {
-            foreach (var account in accountList)
-            {
-                if (account.PhoneNumber == accountNumber)
-                {
-                    account.TotalRewardPoints += points;
-                }
-            }
-        }
-    } 
-}
-
-*/
