@@ -18,10 +18,60 @@ namespace KonekAppAPI.Controllers
         {
             return konekService.GetData();
         }
-        [HttpPatch]
-        public void UpdatesLoadBalance(string accountNumber, string promoName)
+        [HttpPatch("updates-load-balance")] 
+        public IActionResult UpdatesLoadBalance(string accountNumber, string promoName) 
         {
-            konekDataService.UpdateAccountPromo(accountNumber, promoName);
+            // 1. Basic Input Validation
+            if (string.IsNullOrEmpty(accountNumber) || string.IsNullOrEmpty(promoName))
+            {
+                return BadRequest("Account number and promo name are required.");
+            }
+
+            // 2. Centralize Promo Price Logic (moved to a private helper method in this class)
+            int promoPrice = GetPromoPrice(promoName);
+
+            if (promoPrice == 0) 
+            {
+                
+                return BadRequest($"Invalid promo name provided: {promoName}");
+            }
+
+            double currentBalance = konekDataService.GetAccountBalanceByPhoneNumber(accountNumber);
+
+            if (currentBalance >= promoPrice)
+            {
+                double newBalance = currentBalance - promoPrice;
+                konekDataService.UpdateAccountBalance(accountNumber, newBalance);
+
+                // updates the ano active promo
+                konekDataService.UpdateAccountPromo(accountNumber, promoName);
+
+                // returns success
+                // 
+                return NoContent();
+            }
+            else
+            {
+                // returns error
+                return BadRequest("Insufficient balance to purchase this promo.");
+            }
+        }
+
+        // pang kuha lang ng promo price
+        private int GetPromoPrice(string promoName)
+        {
+            switch (promoName)
+            {
+                case "Konek59": return 59;
+                case "Konek75": return 75;
+                case "Konek99": return 99;
+                case "Konek129": return 129;
+                case "Konek35+": return 35;
+                case "Konek249+": return 249;
+                case "Konek99+": return 99;
+                case "Konek360+": return 360;
+                default: return 0; 
+            }
         }
     }
 }
