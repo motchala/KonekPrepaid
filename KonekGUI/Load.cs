@@ -52,17 +52,17 @@ namespace KonekGUI
         private void button6_Click(object sender, EventArgs e)
         {
             // Button Settings
-            if (button7.Visible == false && button8.Visible == false && button9.Visible == false)
+            if (button17.Visible == false && button18.Visible == false && button19.Visible == false)
             {
-                button7.Visible = true;
-                button8.Visible = true;
-                button9.Visible = true;
+                button17.Visible = true;
+                button18.Visible = true;
+                button19.Visible = true;
             }
             else
             {
-                button7.Visible = false;
-                button8.Visible = false;
-                button9.Visible = false;
+                button17.Visible = false;
+                button18.Visible = false;
+                button19.Visible = false;
             }
         }
 

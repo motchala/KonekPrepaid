@@ -519,6 +519,7 @@
             button19.Text = "Theme";
             button19.UseVisualStyleBackColor = true;
             button19.Visible = false;
+            button19.Click += button19_Click;
             // 
             // button20
             // 
