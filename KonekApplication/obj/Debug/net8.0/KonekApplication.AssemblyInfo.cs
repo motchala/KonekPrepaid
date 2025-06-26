@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KonekApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3225486b9bdb2876f2e90adab7299ae1dfd9175")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94d06a23f8f3351c2a06a427a4f8c0af0b06185e")]
 [assembly: System.Reflection.AssemblyProductAttribute("KonekApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KonekApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

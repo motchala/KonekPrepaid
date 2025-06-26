@@ -307,6 +307,7 @@
             label2.Size = new Size(260, 46);
             label2.TabIndex = 3;
             label2.Text = "SIM Credit Load";
+            label2.Click += label2_Click;
             // 
             // button17
             // 

@@ -1,12 +1,10 @@
 ﻿using KonekLogicProcess;
-using KonekCommon;
 namespace KonekApplication
 // runs the whole application, takes care of the UI and UI its processes
 
 {
     internal class MainApplication
     {
-        List<KonekAccount> accountList = new List<KonekAccount>(); // from KonekCommon. testing lang sa signup functionality
         KonekService konekService = new KonekService();
         static string inputNumber = string.Empty;
         // static string inputEmail = string.Empty;

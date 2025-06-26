@@ -178,6 +178,11 @@ namespace KonekGUI
             textBox1.Text = "800";
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
  
