@@ -122,7 +122,7 @@ namespace KonekLogicProcess
         // checks if load balance is sufficient for purchasing promo
         public bool CanPurchasePromo(string accountNumber)
         {
-            int[] promoPrices = { 0, kon59, kon75, kon99, kon129, kon35plus, kon249plus, kon99plus, kon360plus };
+            int[] promoPrices = { 0, kon59, kon75, kon99, kon129, kon99plus, kon360plus, kon35plus, kon249plus };
 
             if (choicePromo >= 1 && choicePromo <= 8)
             {
@@ -144,7 +144,7 @@ namespace KonekLogicProcess
         // updates the load balance after a promo purchase
         public void UpdatesLoadBalance_FromPromo(string accountNumber)
         {
-            int[] promoPrices = { 0, kon59, kon75, kon99, kon129, kon35plus, kon249plus, kon99plus, kon360plus };
+            int[] promoPrices = { 0, kon59, kon75, kon99, kon129, kon99plus, kon360plus, kon35plus, kon249plus };
             if (choicePromo >= 1 && choicePromo <= 8)
             {
                 double currentBalance = DataService.GetAccountBalanceByPhoneNumber(accountNumber);

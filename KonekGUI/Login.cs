@@ -14,11 +14,12 @@ namespace KonekGUI
 {
     public partial class Login : Form
     {
-        KonekService konekService = new KonekService();
+        private KonekService konekService;
         public static string inputNumber = string.Empty;
-        public Login()
+        public Login(KonekService service)
         {
             InitializeComponent();
+            this.konekService = service;
         }
 
         private void button1_Click(object sender, EventArgs e)

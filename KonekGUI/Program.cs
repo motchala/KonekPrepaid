@@ -1,3 +1,5 @@
+using KonekLogicProcess;
+
 namespace KonekGUI
 {
     internal static class Program
@@ -10,8 +12,10 @@ namespace KonekGUI
         {
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
+            KonekService konekService = new KonekService();
+
             ApplicationConfiguration.Initialize();
-            Application.Run(new Login());
+            Application.Run(new Login(konekService));
         }
     }
 }
