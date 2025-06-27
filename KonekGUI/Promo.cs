@@ -40,16 +40,14 @@ namespace KonekGUI
         private void button6_Click(object sender, EventArgs e)
         {
             // Button Settings
-            if (button17.Visible == false && button19.Visible == false && button20.Visible == false)
+            if (button17.Visible == false && button20.Visible == false)
             {
                 button17.Visible = true;
-                button19.Visible = true;
                 button20.Visible = true;
             }
             else
             {
                 button17.Visible = false;
-                button19.Visible = false;
                 button20.Visible = false;
             }
         }
@@ -112,7 +110,7 @@ namespace KonekGUI
 
 
 
-
+        // PROMO BUTTONS
         private void button1_Click(object sender, EventArgs e)
         {
             // Konek59
@@ -248,84 +246,28 @@ namespace KonekGUI
 
 
 
+
+
         private void label9_Click(object sender, EventArgs e)
         {
-
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
             // buttonpanel 2
-
         }
         private void panel7_Paint(object sender, PaintEventArgs e)
         {
             // buttonpanel 2.2
-
         }
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
             // panel 1
-
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             // panel 2 all time fav
-
         }
 
         private void panel8_Paint(object sender, PaintEventArgs e)
@@ -335,22 +277,15 @@ namespace KonekGUI
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
-
         }
-
         private void Promo_Load(object sender, EventArgs e)
         {
-
         }
-
         private void panel9_Paint(object sender, PaintEventArgs e)
         {
-
         }
-
         private void button19_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

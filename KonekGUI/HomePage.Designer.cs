@@ -38,7 +38,6 @@
             button4 = new Button();
             label1 = new Label();
             button7 = new Button();
-            button8 = new Button();
             button9 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -166,19 +165,9 @@
             button7.Visible = false;
             button7.Click += button7_Click;
             // 
-            // button8
-            // 
-            button8.Location = new Point(433, 81);
-            button8.Name = "button8";
-            button8.Size = new Size(205, 39);
-            button8.TabIndex = 4;
-            button8.Text = "Theme";
-            button8.UseVisualStyleBackColor = true;
-            button8.Visible = false;
-            // 
             // button9
             // 
-            button9.Location = new Point(433, 117);
+            button9.Location = new Point(433, 81);
             button9.Name = "button9";
             button9.Size = new Size(205, 39);
             button9.TabIndex = 5;
@@ -195,7 +184,6 @@
             BackgroundImageLayout = ImageLayout.Center;
             ClientSize = new Size(661, 615);
             Controls.Add(button9);
-            Controls.Add(button8);
             Controls.Add(button7);
             Controls.Add(label1);
             Controls.Add(panel2);
@@ -223,7 +211,6 @@
         private Button button4;
         private Label label1;
         private Button button7;
-        private Button button8;
         private Button button9;
     }
 }

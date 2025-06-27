@@ -50,8 +50,8 @@
             button4 = new Button();
             label2 = new Label();
             button17 = new Button();
-            button18 = new Button();
             button19 = new Button();
+            panel9 = new Panel();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -84,7 +84,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(119, 45);
+            label1.Location = new Point(123, 50);
             label1.Name = "label1";
             label1.Size = new Size(121, 23);
             label1.TabIndex = 2;
@@ -114,10 +114,11 @@
             // 
             // textBox1
             // 
+            textBox1.AcceptsTab = true;
             textBox1.BackColor = Color.White;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(262, 41);
+            textBox1.Location = new Point(262, 48);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(138, 30);
             textBox1.TabIndex = 1;
@@ -142,7 +143,7 @@
             button16.FlatAppearance.BorderColor = Color.Black;
             button16.FlatStyle = FlatStyle.Popup;
             button16.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button16.Location = new Point(427, 33);
+            button16.Location = new Point(424, 39);
             button16.Name = "button16";
             button16.Size = new Size(113, 45);
             button16.TabIndex = 0;
@@ -311,7 +312,7 @@
             // 
             // button17
             // 
-            button17.Location = new Point(434, 115);
+            button17.Location = new Point(434, 82);
             button17.Name = "button17";
             button17.Size = new Size(205, 39);
             button17.TabIndex = 8;
@@ -319,16 +320,6 @@
             button17.UseVisualStyleBackColor = true;
             button17.Visible = false;
             button17.Click += button17_Click;
-            // 
-            // button18
-            // 
-            button18.Location = new Point(434, 79);
-            button18.Name = "button18";
-            button18.Size = new Size(205, 39);
-            button18.TabIndex = 7;
-            button18.Text = "Theme";
-            button18.UseVisualStyleBackColor = true;
-            button18.Visible = false;
             // 
             // button19
             // 
@@ -343,14 +334,23 @@
             button19.Visible = false;
             button19.Click += button19_Click;
             // 
+            // panel9
+            // 
+            panel9.BackColor = Color.DarkSlateGray;
+            panel9.BorderStyle = BorderStyle.FixedSingle;
+            panel9.Location = new Point(1, 203);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(659, 22);
+            panel9.TabIndex = 28;
+            // 
             // Load
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Gainsboro;
             ClientSize = new Size(661, 615);
+            Controls.Add(panel9);
             Controls.Add(button17);
-            Controls.Add(button18);
             Controls.Add(button19);
             Controls.Add(label2);
             Controls.Add(panel3);
@@ -391,7 +391,7 @@
         private Label label1;
         private Label label2;
         private Button button17;
-        private Button button18;
         private Button button19;
+        private Panel panel9;
     }
 }

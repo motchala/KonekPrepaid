@@ -24,14 +24,11 @@ namespace KonekGUI
             inputNumber = Login.inputNumber;
         }
 
-        private void panel3_Paint(object sender, PaintEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void Load_Load(object sender, EventArgs e)
-        {
-
+            // Account Menu Buttonn 
+            i_Accounts accountForm = new i_Accounts(konekService);
+            accountForm.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -42,29 +39,23 @@ namespace KonekGUI
             this.Hide();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            // Account Menu Buttonn 
-            i_Accounts accountForm = new i_Accounts(konekService);
-            accountForm.Show();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             // Button Settings
-            if (button17.Visible == false && button18.Visible == false && button19.Visible == false)
+            if (button17.Visible == false && button19.Visible == false)
             {
                 button17.Visible = true;
-                button18.Visible = true;
                 button19.Visible = true;
             }
             else
             {
                 button17.Visible = false;
-                button18.Visible = false;
                 button19.Visible = false;
             }
         }
+        
+
+        
 
         private void button19_Click(object sender, EventArgs e)
         {
@@ -107,81 +98,77 @@ namespace KonekGUI
             textBox1.Text = "";
         }
 
+
+        // LOAD BUTTONS
         private void button1_Click(object sender, EventArgs e)
         {
-            // 10 load
+            
             textBox1.Text = "10";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Text = "20";
-
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             textBox1.Text = "30";
-
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             textBox1.Text = "50";
-
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             textBox1.Text = "100";
-
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             textBox1.Text = "150";
-
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             textBox1.Text = "180";
-
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             textBox1.Text = "200";
-
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
             textBox1.Text = "250";
-
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
             textBox1.Text = "300";
-
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
             textBox1.Text = "500";
-
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             textBox1.Text = "800";
-
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-
+        }
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+        }
+        private void Load_Load(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -1729,7 +1729,7 @@
       "projectName": "KonekApplication",
       "projectPath": "C:\\Users\\Frederick\\Source\\Repos\\KonekPrepaid\\KonekApplication\\KonekApplication.csproj",
       "packagesPath": "C:\\Users\\Frederick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Frederick\\Source\\Repos\\KonekPrepaid\\KonekApplication\\obj\\",
+      "outputPath": "C:\\Users\\Frederick\\source\\repos\\KonekPrepaid\\KonekApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

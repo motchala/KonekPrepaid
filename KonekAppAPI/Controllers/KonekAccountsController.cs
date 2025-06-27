@@ -73,5 +73,15 @@ namespace KonekAppAPI.Controllers
                 default: return 0; 
             }
         }
+
+
+
+
+        [HttpDelete("{accountNumber}/promo")]
+        public IActionResult UnsubscribePromo(string accountNumber)
+        {
+            konekService.UnsubscribePromo(accountNumber);
+            return Ok(new { message = "Promo unsubscribed." });
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace KonekGUI
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // LOAD
             Load loadForm = new Load(konekService);
             loadForm.Show();
             this.Hide();
@@ -36,17 +37,11 @@ namespace KonekGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // PROMO
             Promo promoForm = new Promo(konekService);
             promoForm.Show();
             this.Hide();
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            // HomePage Button
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             // Rewards Button
@@ -60,7 +55,27 @@ namespace KonekGUI
             // Account Menu Buttonn 
             i_Accounts accountForm = new i_Accounts(konekService);
             accountForm.Show();
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            // Settings buttons
+            if (button7.Visible == false && button9.Visible == false)
+            {
+                button7.Visible = true;
+                button9.Visible = true;
+            }
+            else
+            {
+                button7.Visible = false;
+                button9.Visible = false;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Button Exit from Settings
+            this.Close();
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -71,29 +86,9 @@ namespace KonekGUI
             this.Hide();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-
-            // Settings buttons
-            if (button7.Visible == false && button8.Visible == false && button9.Visible == false)
-            {
-                button7.Visible = true;
-                button8.Visible = true;
-                button9.Visible = true;
-
-            }else
-            {
-                button7.Visible = false;
-                button8.Visible = false;
-                button9.Visible = false;
-            }
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            // Button Exit from Settings
-            this.Close();
+            // HomePage Button
         }
     }
 }

@@ -64,7 +64,6 @@
             button2 = new Button();
             button1 = new Button();
             button17 = new Button();
-            button19 = new Button();
             button20 = new Button();
             panel10 = new Panel();
             panel9 = new Panel();
@@ -500,7 +499,7 @@
             // 
             // button17
             // 
-            button17.Location = new Point(433, 110);
+            button17.Location = new Point(433, 74);
             button17.Name = "button17";
             button17.Size = new Size(205, 39);
             button17.TabIndex = 26;
@@ -508,17 +507,6 @@
             button17.UseVisualStyleBackColor = true;
             button17.Visible = false;
             button17.Click += button17_Click;
-            // 
-            // button19
-            // 
-            button19.Location = new Point(433, 74);
-            button19.Name = "button19";
-            button19.Size = new Size(205, 39);
-            button19.TabIndex = 25;
-            button19.Text = "Theme";
-            button19.UseVisualStyleBackColor = true;
-            button19.Visible = false;
-            button19.Click += button19_Click;
             // 
             // button20
             // 
@@ -559,7 +547,6 @@
             Controls.Add(panel10);
             Controls.Add(panel9);
             Controls.Add(button17);
-            Controls.Add(button19);
             Controls.Add(button20);
             Controls.Add(label1);
             Controls.Add(panel3);
@@ -628,7 +615,6 @@
         private Button button2;
         private Button button1;
         private Button button17;
-        private Button button19;
         private Button button20;
         private Panel panel10;
         private Panel panel9;
