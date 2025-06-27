@@ -25,8 +25,6 @@ namespace KonekGUI
         private void button1_Click(object sender, EventArgs e)
         {
             // Login Button
-
-
             inputNumber = textBox1.Text; // phone number
             KonekService.userPin = textBox2.Text; // password
 
@@ -45,6 +43,19 @@ namespace KonekGUI
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // show password
+            if (textBox2.UseSystemPasswordChar == true)
+            {
+                textBox2.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                textBox2.UseSystemPasswordChar = true;
+            }
+        }
+
         private void Login_Load(object sender, EventArgs e)
         {
 
@@ -60,19 +71,6 @@ namespace KonekGUI
         {
             // password
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // show password
-            if (textBox2.UseSystemPasswordChar == true)
-            {
-                textBox2.UseSystemPasswordChar = false;
-            }
-            else
-            {
-                textBox2.UseSystemPasswordChar = true;
-            }
         }
     }
 }

@@ -115,10 +115,6 @@ namespace KonekLogicProcess
         }
 
         
-
-
-
-
         // checks if load balance is sufficient for purchasing promo
         public bool CanPurchasePromo(string accountNumber)
         {
@@ -138,8 +134,6 @@ namespace KonekLogicProcess
         {
             return CanPurchasePromo(accountNumber);  
         }
-        
-
 
         // updates the load balance after a promo purchase
         public void UpdatesLoadBalance_FromPromo(string accountNumber)
@@ -212,10 +206,6 @@ namespace KonekLogicProcess
         }
 
 
-
-
-
-
         // FOR REWARD CHOICES
         public bool CanPurchaseReward(string accountNumber)
         {
@@ -247,14 +237,6 @@ namespace KonekLogicProcess
                 DataService.UpdateAccountPromo(accountNumber, promoName);
             }
         }
-
-
-
-
-
-
-
-
 
 
         // LOGIN. 2nd checking process
@@ -293,6 +275,13 @@ namespace KonekLogicProcess
         {
             var konekAccount = GetKonekAccount(accountNumber, PIN);
             return konekAccount.LoadBalance;
+        }
+
+
+
+        public void UnsubscribePromo(string accountNumber)
+        {
+            DataService.UpdateAccountPromo(accountNumber, string.Empty);
         }
     }
 }

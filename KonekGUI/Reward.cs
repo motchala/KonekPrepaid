@@ -21,36 +21,9 @@ namespace KonekGUI
             this.konekService = service;
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-            // panel all rewards 1
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            // rewards whole panel
-
-        }
-
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
-            // panel limited offer panel 2.2
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Reward_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-            // btnpanel 1.2
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-            // btnpanel 2.2
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -62,7 +35,7 @@ namespace KonekGUI
 
         private void button15_Click(object sender, EventArgs e)
         {
-            // btn next 1.2
+            // btn next 1.1
             panel5.Visible = false;
             panel4.Visible = false;
         }
@@ -99,16 +72,14 @@ namespace KonekGUI
         private void button6_Click(object sender, EventArgs e)
         {
             // Button Settings
-            if (button17.Visible == false && button19.Visible == false && button20.Visible == false)
+            if (button17.Visible == false && button20.Visible == false)
             {
                 button17.Visible = true;
-                button19.Visible = true;
                 button20.Visible = true;
             }
             else
             {
                 button17.Visible = false;
-                button19.Visible = false;
                 button20.Visible = false;
             }
         }
@@ -132,10 +103,6 @@ namespace KonekGUI
             this.Hide();
         }
 
-        private void Reward_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -271,6 +238,38 @@ namespace KonekGUI
             {
                 MessageBox.Show("Insufficient Reward Points.");
             }
+        }
+
+
+
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+            // panel all rewards 1
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            // rewards whole panel
+        }
+
+        private void panel8_Paint(object sender, PaintEventArgs e)
+        {
+            // panel limited offer panel 2.2
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+            // btnpanel 1.2
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+            // btnpanel 2.2
         }
     }
 }
