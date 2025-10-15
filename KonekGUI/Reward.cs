@@ -92,7 +92,7 @@ namespace KonekGUI
         private void button20_Click(object sender, EventArgs e)
         {
             // Button Back from Settings
-            this.Close();
+            Application.Exit();
         }
 
         private void button17_Click(object sender, EventArgs e)

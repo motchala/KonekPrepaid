@@ -75,7 +75,7 @@ namespace KonekGUI
         private void button7_Click(object sender, EventArgs e)
         {
             // Button Exit from Settings
-            this.Close();
+            Application.Exit();
         }
 
         private void button9_Click(object sender, EventArgs e)
