@@ -54,7 +54,7 @@ namespace KonekGUI
         private void button20_Click(object sender, EventArgs e)
         {
             // Button Exit from Settings
-            this.Close();
+            Application.Exit();
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -246,7 +246,7 @@ namespace KonekGUI
 
 
 
-
+        // i've updated the project for IFTTT testing
 
         private void label9_Click(object sender, EventArgs e)
         {
