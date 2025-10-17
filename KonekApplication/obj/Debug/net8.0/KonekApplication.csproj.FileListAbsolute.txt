@@ -158,3 +158,6 @@ C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\obj\Debug\net8.0\r
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\obj\Debug\net8.0\KonekApplication.pdb
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\obj\Debug\net8.0\KonekApplication.genruntimeconfig.cache
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\obj\Debug\net8.0\ref\KonekApplication.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\MailKit.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\MimeKit.dll

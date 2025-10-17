@@ -111,6 +111,10 @@ namespace KonekLogicProcess
             {
                 totalRewardPts += earnedPoints;
                 DataService.AddRewardPointsLoad(accountNumber, earnedPoints);
+
+                EmailService email = new EmailService();
+                email.SendEmail(accountNumber);
+                return;
             }
         }
 
@@ -148,6 +152,10 @@ namespace KonekLogicProcess
 
                 //this one updates the promo name when checking for the account's current active promo
                 DataService.UpdateAccountPromo(accountNumber, promoName);
+
+                EmailService email = new EmailService();
+                email.SendEmail(accountNumber);
+                return;
             }
         }
 
@@ -197,6 +205,10 @@ namespace KonekLogicProcess
             {
                 totalRewardPts += earnedPoints;
                 DataService.AddRewardPointsPromo(accountNumber, earnedPoints);
+
+                EmailService email =  new EmailService();
+                email.SendEmail(accountNumber);
+                return;
             }
         }
 
@@ -235,6 +247,10 @@ namespace KonekLogicProcess
 
                 //this one updates the promo name when checking for the account's current active promo
                 DataService.UpdateAccountPromo(accountNumber, promoName);
+
+                EmailService email = new EmailService();
+                email.SendEmail(accountNumber);
+                return;
             }
         }
 

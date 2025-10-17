@@ -13,7 +13,7 @@ namespace KonekLogicProcess
         public void SendEmail(string accountNumber)
         {
             var message = new MimeMessage();
-            message.From.Add(new MailboxAddress("ATM Transaction", "do-not-reply@atm.com"));
+            message.From.Add(new MailboxAddress("Successful Transaction", "do-not-reply@atm.com"));
             message.To.Add(new MailboxAddress("Account Owner", "user@example.com"));
             message.Subject = "Account Transaction";
             message.Body = new TextPart("plain")
@@ -29,14 +29,14 @@ namespace KonekLogicProcess
                 var tls = MailKit.Security.SecureSocketOptions.StartTls;
                 client.Connect(smtpHost, smtpPort, tls);
 
-                var userName = "0c8781b15e2063";
-                var password = "af256fbdb07ed2";
+                var userName = "5db290b7234a85";
+                var password = "13e7b2d9ad37a3";
 
                 client.Authenticate(userName, password);
 
                 client.Send(message);
                 client.Disconnect(true);
-            
+
             }
 
 
