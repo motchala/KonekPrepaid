@@ -215,6 +215,7 @@
             button7.TabIndex = 3;
             button7.Text = "50";
             button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click_1;
             // 
             // button3
             // 
@@ -225,6 +226,7 @@
             button3.TabIndex = 2;
             button3.Text = "30";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click_1;
             // 
             // button2
             // 
@@ -235,6 +237,7 @@
             button2.TabIndex = 1;
             button2.Text = "20";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click_1;
             // 
             // button1
             // 

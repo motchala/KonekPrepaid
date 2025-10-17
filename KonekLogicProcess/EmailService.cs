@@ -18,7 +18,7 @@ namespace KonekLogicProcess
             message.Subject = "Account Transaction";
             message.Body = new TextPart("plain")
             {
-                Text = $"Account {accountNumber}\n\n" +
+                Text = $"Account: {accountNumber}\n\n" +
                         "A transaction was made to your account.\n\n"
             };
 
