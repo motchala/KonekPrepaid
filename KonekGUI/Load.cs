@@ -53,9 +53,9 @@ namespace KonekGUI
                 button19.Visible = false;
             }
         }
-        
 
-        
+
+
 
         private void button19_Click(object sender, EventArgs e)
         {
@@ -102,21 +102,20 @@ namespace KonekGUI
         // LOAD BUTTONS
         private void button1_Click(object sender, EventArgs e)
         {
-            
             textBox1.Text = "10";
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click_1(object sender, EventArgs e)
         {
             textBox1.Text = "20";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click_1(object sender, EventArgs e)
         {
             textBox1.Text = "30";
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click_1(object sender, EventArgs e)
         {
             textBox1.Text = "50";
         }
@@ -170,6 +169,8 @@ namespace KonekGUI
         private void Load_Load(object sender, EventArgs e)
         {
         }
+
+
     }
 }
  

@@ -205,10 +205,6 @@ namespace KonekLogicProcess
             {
                 totalRewardPts += earnedPoints;
                 DataService.AddRewardPointsPromo(accountNumber, earnedPoints);
-
-                EmailService email =  new EmailService();
-                email.SendEmail(accountNumber);
-                return;
             }
         }
 
