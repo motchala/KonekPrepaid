@@ -8,10 +8,10 @@ namespace KonekDataServices
 
         public KonekDataService()
         {
-            // iDataService = new InMemoryDataService();
+             iDataService = new InMemoryDataService();
             // iDataService = new TextFileDataService();
             // iDataService = new JsonFileDataService();
-             iDataService = new DBDataService();
+            // iDataService = new DBDataService();
         }
 
         public List<KonekAccount> GetAllAccounts()
