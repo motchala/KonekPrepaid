@@ -94,11 +94,15 @@ C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\K
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\KonekApplication.pdb
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\MailKit.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
@@ -112,6 +116,7 @@ C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\M
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\MimeKit.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\System.ClientModel.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\System.Diagnostics.EventLog.dll
@@ -158,6 +163,3 @@ C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\obj\Debug\net8.0\r
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\obj\Debug\net8.0\KonekApplication.pdb
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\obj\Debug\net8.0\KonekApplication.genruntimeconfig.cache
 C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\obj\Debug\net8.0\ref\KonekApplication.dll
-C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
-C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\MailKit.dll
-C:\Users\Frederick\Source\Repos\KonekPrepaid\KonekApplication\bin\Debug\net8.0\MimeKit.dll
