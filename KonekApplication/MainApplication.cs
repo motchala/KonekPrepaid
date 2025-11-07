@@ -1,15 +1,26 @@
 ﻿using KonekLogicProcess;
+using Microsoft.Extensions.Configuration;
+
 namespace KonekApplication
 // runs the whole application, takes care of the UI and UI its processes
 
 {
     internal class MainApplication
     {
-        KonekService konekService = new KonekService();
-        static string inputNumber = string.Empty;
-        // static string inputEmail = string.Empty;
+        private readonly KonekService konekService;
+        private static string inputNumber = string.Empty;
+
         public MainApplication()
         {
+            /*
+            var configuration = new ConfigurationBuilder()
+                .SetBasePath(AppContext.BaseDirectory)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .Build();
+
+            var emailService = new EmailService(configuration);
+            konekService = new KonekService(emailService);
+            */
             Login();
         }
 

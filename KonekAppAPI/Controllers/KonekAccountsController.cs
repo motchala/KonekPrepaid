@@ -8,14 +8,23 @@ namespace KonekAppAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class KonekAccountsController : ControllerBase
+    public class KonekAccountController : ControllerBase
     {
         KonekService konekService = new KonekService();
         KonekDataService konekDataService = new KonekDataService();
 
+        private readonly KonekLogicProcess.KonekService _konekService;
+        public KonekAccountController(KonekLogicProcess.KonekService konekService)
+        {
+            _konekService = konekService;
+        }
+
         [HttpGet("Get All Accounts Data")]
         public IEnumerable<KonekAccount> GetAccounts()
         {
+            var accounts = _konekService.GetData();
+
+
             return konekService.GetData();
         }
         [HttpPatch("updates-load-balance")] 

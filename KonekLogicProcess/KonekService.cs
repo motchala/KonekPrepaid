@@ -41,7 +41,22 @@ namespace KonekLogicProcess
                         reward8 = 12.0; // panel 2 ito
         public static double totalRewardPts = 0;
         public static string promoName = string.Empty;
-        
+
+
+
+
+        // for SIA configuration oct 25 | connection to web app or the API
+        public readonly EmailServices? _emailService;
+
+        public KonekService() { }
+
+        public KonekService(EmailServices emailService)
+        {
+            _emailService = emailService;
+        }
+
+
+
         // this checks the validity of the inputted account on the Login part
         public bool ValidateAccount(string accountNumber, string userPin) // ito, para lang  magamit ko 'to  sa ibang project.
         {
@@ -112,8 +127,7 @@ namespace KonekLogicProcess
                 totalRewardPts += earnedPoints;
                 DataService.AddRewardPointsLoad(accountNumber, earnedPoints);
 
-                EmailService email = new EmailService();
-                email.SendEmail(accountNumber);
+                _emailService.SendEmail(accountNumber, "sample@gmail.com");
                 return;
             }
         }
@@ -153,8 +167,7 @@ namespace KonekLogicProcess
                 //this one updates the promo name when checking for the account's current active promo
                 DataService.UpdateAccountPromo(accountNumber, promoName);
 
-                EmailService email = new EmailService();
-                email.SendEmail(accountNumber);
+                _emailService.SendEmail(accountNumber, "sample@gmail.com");
                 return;
             }
         }
@@ -244,8 +257,7 @@ namespace KonekLogicProcess
                 //this one updates the promo name when checking for the account's current active promo
                 DataService.UpdateAccountPromo(accountNumber, promoName);
 
-                EmailService email = new EmailService();
-                email.SendEmail(accountNumber);
+                _emailService.SendEmail(accountNumber, "sample@gmail.com");
                 return;
             }
         }
